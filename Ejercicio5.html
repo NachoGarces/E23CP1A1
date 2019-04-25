@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" name="calculator" value="" id="text">
+    <br>
+    <button class="btn" id="button1" type="button" name="button" value="1" onclick="num(this)">1</button>
+    <button class="btn" id="button2" type="button" name="button" value="2" onclick="num(this)">2</button>
+    <button class="btn" id="button3" type="button" name="button" value="3" onclick="num(this)">3</button>
+    <button class="btn" id="button4" type="button" name="button" value="4" onclick="num(this)">4</button>
+    <button class="btn" id="button5" type="button" name="button" value="5" onclick="num(this)">5</button>
+    <br>
+    <button class="btn" id="button6" type="button" name="button" value="6" onclick="num(this)">6</button>
+    <button class="btn" id="button7" type="button" name="button" value="7" onclick="num(this)">7</button>
+    <button class="btn" id="button8" type="button" name="button" value="8" onclick="num(this)">8</button>
+    <button class="btn" id="button9" type="button" name="button" value="9" onclick="num(this)">9</button>
+    <button class="btn" id="button0" type="button" name="button" value="0" onclick="num(this)">0</button>
+    <br>  
+    <button class="btn" id="button+" type="button" name="button" value="+" onclick="num(this)">+</button>
+    <button class="btn" id="button-" type="button" name="button" value="-" onclick="num(this)">-</button>
+    <button class="btn" id="button*" type="button" name="button" value="*" onclick="num(this)">*</button>
+    <button class="btn" id="button/" type="button" name="button" value="/" onclick="num(this)">/</button>
+    <button class="btn" id="button." type="button" name="button" value="." onclick="num(this)">.</button>
+    <br>
+    <button class="result" type="button" name="result" onclick="calcTotal()">=</button>
+    <script>
+      var result = document.getElementsByName("result")[0];
+      var calculator = document.getElementsByName("calculator")[0];
+      var calcTotal = function(){
+        calculator.value = eval(calculator.value);
+      }
+      function num(num){
+        calculator.value += document.getElementById(num.id).value;
+      }
+    </script>
+  </body>
+</html>
